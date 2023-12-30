@@ -6,7 +6,7 @@
 #    By: akdovlet <akdovlet@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/29 19:50:55 by akdovlet          #+#    #+#              #
-#    Updated: 2023/12/30 01:42:52 by akdovlet         ###   ########.fr        #
+#    Updated: 2023/12/30 01:46:35 by akdovlet         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ USER=$(who | wc -l)
 IP=$(hostname -I | awk '{print $1}')
 MAC=$(ip link show | grep ether | awk '{print $2}')
 SUDO=$(grep COMMAND /var/log/auth.log | wc -l)
+
 wall -n "System Architecture	: $ARCHITECTURE
 CPU physical cores	: $CPU
 CPU virtual cores	: $VCPU
